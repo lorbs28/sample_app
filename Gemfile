@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -45,3 +45,5 @@ group :production do
   # gems specifically for Heroku go here
   gem 'pg'
 end
+
+# Skip attempting to install the pg gem
