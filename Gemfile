@@ -20,6 +20,13 @@ group :test do
   gem 'webrat'
   gem 'spork'
   gem 'factory_girl_rails'
+
+  gem 'autotest'
+  gem 'autotest-rails-pure'
+  gem 'autotest-fsevent'
+  gem 'autotest-growl'
+
+
 end
 
 # Gems used only for assets and not required
