@@ -41,14 +41,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+#group :test do
   # Pretty printed test output
-  gem 'turn', :require => false
-end
+#  gem 'turn', :require => false
+#end
 
-group :production do
+#group :production do
   # gems specifically for Heroku go here
-  gem 'pg'
-end
+#  gem 'pg'
+#end
 
 # Skip attempting to install the pg gem
