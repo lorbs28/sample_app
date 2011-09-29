@@ -11,25 +11,16 @@
   <%= render 'header' %>
 
     <div id="wrapper" class="wat-cf">
-      <div class="flash">
-        <% flash.each do |type, message| -%>
-          <div class="message <%= type %>">
-            <p><%= message %></p>
-          </div>
-        <% end -%>
-      </div>
+
       <div id="main">
         <%= yield %>
-        <div id="footer">
-          <div class="block">
-            <p>Copyright &copy; <%= Time.now.year %> Bryan's Sample App.</p>
-          </div>
-        </div>
-      </div>
-      <div id="sidebar">
-        <%= yield :sidebar %>
-      </div>
+
     </div>
+
+  </div>
+
+  <%= render 'footer' %>
+
   </div>
 </body>
 </html>
