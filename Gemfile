@@ -10,6 +10,7 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'web-app-theme'
 
+
 group :development do
   gem 'rspec-rails'
   gem 'faker'
