@@ -1,15 +1,17 @@
-require 'digest'
 # == Schema Information
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
+require 'digest'
 class User < ActiveRecord::Base
     attr_accessor :password
     attr_accessible :name, :email, :password, :password_confirmation
@@ -75,6 +77,12 @@ class User < ActiveRecord::Base
         user = find_by_email(email)
         user && user.has_password?(submitted_password) ? user : nil
     end
+    
+    def self.authenticate_with_salt(id, cookie_salt)
+    user = find_by_id(id)
+    (user && user.salt == cookie_salt) ? user : nil
+    end
+
 
     # Private methods that can only be used by the object
 
