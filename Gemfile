@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 
 gem 'sqlite3', :group => :development
 gem 'gravatar_image_tag'
-gem 'will_paginate'
+gem 'will_paginate', '3.0.pre2'
 gem 'web-app-theme'
 
 

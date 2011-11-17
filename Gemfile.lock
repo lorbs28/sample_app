@@ -139,7 +139,7 @@ GEM
       nokogiri (>= 1.2.0)
       rack (>= 1.0)
       rack-test (>= 0.5.3)
-    will_paginate (3.0.0)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -164,4 +164,4 @@ DEPENDENCIES
   uglifier
   web-app-theme
   webrat
-  will_paginate
+  will_paginate (= 3.0.pre2)
