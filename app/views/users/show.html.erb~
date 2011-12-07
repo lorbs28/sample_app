@@ -1,6 +1,0 @@
-<h1>
-  <%= gravatar_image_tag 'example@railstutorial.org' %>
-  <%= @user.name %>
-</h1>
-
-<%= @user.name %>, <%= @user.email %>
