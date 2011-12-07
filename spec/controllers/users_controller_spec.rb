@@ -120,6 +120,13 @@ describe UsersController do
       response.should have_selector('div.pagination')
     end
     
+    it "should not show delete links if signed in user didn't create post" do
+        signed_in_user = Factory(:user, :email => "foobar@hotmail.com")
+        test_sign_in(signed_in_user)
+        get :show, :id => @user
+        response.should_not have_selector("a", :content=> "delete")
+    end
+    
     it "should display the micropost count" do
       10.times { Factory(:micropost, :user => @user, :content => "foo") }
       get :show, :id => @user
@@ -399,4 +406,18 @@ describe UsersController do
       end
     end
   end
+  
+    describe "sidebar" do
+        before(:each) do
+          @user = Factory(:user)
+        end
+        
+        it "should show the right number of microposts" do
+          mp1 = Factory(:micropost, :user => @user, :content => "foo")
+          mp2 = Factory(:micropost, :user => @user, :content => "bar")
+          get :show, :id => @user
+          response.should have_selector("td", :content => "Microposts 2")
+        end
+      end
+
 end
