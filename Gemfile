@@ -1,5 +1,8 @@
 source 'http://rubygems.org'
 
+#Reverted from 3.1 back to 3.0 so that I could actually get things done.
+#Cleaned up the messiness in Gemfile too.
+
 gem 'rails', '3.0.11'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
